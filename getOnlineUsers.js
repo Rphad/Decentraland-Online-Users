@@ -1,5 +1,7 @@
 const fetch = require('node-fetch');
 
+// This defines the properties of the csv file.
+// More info here : https://www.npmjs.com/package/csv-writer
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 const csvWriter = createCsvWriter({
     path: './activity_history.csv',
@@ -10,6 +12,7 @@ const csvWriter = createCsvWriter({
     append: true,
 });
 
+// Decentraland nodes. I got the list from https://catalyst-monitor.vercel.app/
 const productiveServers = [
 	'https://peer.decentraland.org',           // DCL
 	'https://peer-ec1.decentraland.org',       // DCL - US East
@@ -25,6 +28,8 @@ const productiveServers = [
 	'https://peer.dclnodes.io',                // DSM
 ]
 
+// This function queries each node for its online users and add them to the total.
+// It is recursive :)
 async function getUsers(hosts, index) {
   console.log(hosts[index])
   fetch(hosts[index]+'/comms/layers').then(_ => {
@@ -36,13 +41,14 @@ async function getUsers(hosts, index) {
     } else {
       newEntry = [{time: Date.now(),  players: tot}]
       console.log(newEntry)
-      console.log("ok")
+      console.log("Got the total")
       csvWriter.writeRecords(newEntry).then(() => {
-				console.log('...Done');
+				console.log('Wrote to the csv. \n Done.');
 			});
     }
   })
 }
 
+// Let's go
 var tot = 0;
 getUsers(productiveServers, 0)
