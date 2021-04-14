@@ -35,3 +35,9 @@ Potential improvements (PRs welcome) include :
 ## Donate
 
 https://www.rphad.com/en/donate
+
+## Comments
+
+I love how the graph has a strong sine look. Also, I wasn't able to get data on the first sunday, could be due to several reasons but my guess is that one node wasn't up.
+
+![Graph](plot.png "Graph after ~6 days")
