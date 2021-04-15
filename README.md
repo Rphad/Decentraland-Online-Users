@@ -30,7 +30,7 @@ Potential improvements (PRs welcome) include :
 - Running a basic static site that will display the results
 - Check if there are additional nodes (the list is hardcoded)
 - Display the online users per realm (1 node == 1 realm IIRC) 
-- Automatically update the csv on Github. (I may be the only one to do this though)
+- ~~Automatically update the csv on Github. (I may be the only one able to do this though)~~ DONE ! The csv file updates every hour. You can open an issue if you have a good reason to ask for a smaller interval.
 
 ## Donate
 
@@ -38,6 +38,6 @@ https://www.rphad.com/en/donate
 
 ## Comments
 
-I love how the graph has a strong sine look. Also, I wasn't able to get data on the first sunday, could be due to several reasons but my guess is that one node wasn't up.
+I love how the graph has a strong sine look. Also, I wasn't able to get data on the first sunday, could be due to several reasons but my guess is that one node wasn't up. The graph won't be automatically updated because it will quickly be messy since I plot all the data. The R script should be easy to understand though.
 
 ![Graph](plot.png "Graph after ~6 days")
