@@ -39,7 +39,7 @@ async function getUsers(hosts, index) {
       tot+=_.reduce((sum, elem) => sum + elem.usersCount, 0);
       getUsers(hosts, index+1)
     } else {
-      newEntry = [{time: Date.now(),  players: tot}]
+      newEntry = [{time: Math.round(Date.now() / 1000),  players: tot}]
       console.log(newEntry)
       console.log("Got the total")
       csvWriter.writeRecords(newEntry).then(() => {

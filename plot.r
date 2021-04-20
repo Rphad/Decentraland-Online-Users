@@ -2,7 +2,7 @@
 df <- read.csv('activity_history.csv');
 
 #Converting the time units
-df$HRTIME <- as.POSIXct(df$TIME/1000, origin = "1970-01-01", tz="UTC")
+df$HRTIME <- as.POSIXct(df$TIME, origin = "1970-01-01", tz="UTC")
 
 #Storing the columns in x and y vectors for easier reading & plotting
 x <- df$HRTIME;

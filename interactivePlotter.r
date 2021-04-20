@@ -8,7 +8,7 @@ library(htmlwidgets)
 # Load dataset from github
 df <- read.csv('activity_history_10_days.csv');
 #Converting the time units
-df$TIME <- as.POSIXct(df$TIME/1000, origin = "1970-01-01", tz="UTC")
+df$TIME <- as.POSIXct(df$TIME, origin = "1970-01-01", tz="UTC")
 
 # Usual area chart
 p <- df %>%
@@ -23,4 +23,4 @@ p <- ggplotly(p)
 p
 
 # save the widget
-saveWidget(p, file=paste0(getwd(), "/interactiveGraph.html"))%   
+saveWidget(p, file=paste0(getwd(), "/interactiveGraph.html"))
