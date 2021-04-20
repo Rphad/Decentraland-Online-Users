@@ -1,4 +1,4 @@
-braries
+#Libraries
 library(ggplot2)
 library(dplyr)
 library(plotly)
@@ -6,7 +6,7 @@ library(hrbrthemes)
 library(htmlwidgets)
 
 # Load dataset from github
-df <- read.csv('activity_10days.csv');
+df <- read.csv('activity_history_10_days.csv');
 #Converting the time units
 df$TIME <- as.POSIXct(df$TIME/1000, origin = "1970-01-01", tz="UTC")
 
