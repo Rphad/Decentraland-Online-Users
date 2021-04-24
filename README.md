@@ -1,4 +1,7 @@
 # Decentraland-Online-Users
+
+**The dashboard is live ! See it on my website : https://www.rphad.com/dcl_dashboard**
+
 ## What is this repo about ?
 This little repository includes a script that I use to fetch the amount of online users in [Decentraland](https://www.decentraland.org). It runs every 5 minutes on a Raspberry Pi, and I achieved that using a cron [cron](https://en.wikipedia.org/wiki/Cron) entry: `*/5 * * * *  node getOnlineUsers.js`.
 
@@ -27,7 +30,7 @@ Feel free to use the data of the csv as you want. Beware that, for now, I will u
 ## Improvements
 Potential improvements (PRs welcome) include : 
 
-- Running a basic static site that will display the results
+- ~~Running a basic static site that will display the results~~ DONE ! See the dashboard [here](https://www.rphad.com/dcl_dashboard)
 - Check if there are additional nodes (the list is hardcoded)
 - Display the online users per realm (1 node == 1 realm IIRC) 
 - ~~Automatically update the csv on Github. (I may be the only one able to do this though)~~ DONE ! The csv file updates every hour. You can open an issue if you have a good reason to ask for a smaller interval.
