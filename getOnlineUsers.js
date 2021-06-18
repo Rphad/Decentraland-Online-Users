@@ -22,12 +22,11 @@ const productiveServers = [
 	'https://interconnected.online',           // Esteban
 	'https://peer.decentral.games',            // Baus
 	'https://peer.melonwave.com',              // Ari
-	'https://decentraland.org.cn',             // JJ
 	'https://peer.kyllian.me',                 // Kyllian
 	'https://peer.uadevops.com',               // SFox
 	'https://peer.dclnodes.io',                // DSM
 ]
-
+//removzd decentraland.org.cn because of invalid cert
 // This function queries each node for its online users and add them to the total.
 // It is recursive :)
 async function getUsers(hosts, index) {
